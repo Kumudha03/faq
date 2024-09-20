@@ -1,11 +1,11 @@
 :root{
 --light_pink: hsl(275, 100%, 97%);
---grayish_purple: hsl(293, 54%, 43%);
---dark_purple: hsl(291, 91%, 45%);
+--grayish_purple: hsl(293, 54%, 38%);
+--dark_purple: hsl(291, 87%, 40%);
 }
 
 body{
-font-family:url(https://fonts.google.com/specimen/Work+Sans);
+font-family:"Roboto",sans-serif;
 font-weight: 400, 600, 700;
 background-image: url(background-pattern-desktop.svg);
 background-size:100vw  ;
@@ -22,16 +22,16 @@ main{
     background-color: white;
     border-radius: 10px;
     padding: 30px;
-    margin:  auto;
+    margin:20%  auto;
 }
 
 p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 h1{
     font-weight: 700;
-    font-size:50px;
+    font-size:3rem;
     margin:0 0 0 20px;
 }
 
@@ -44,8 +44,12 @@ header,.qn{
 
 .qn{
     justify-content: space-between;
-    font-weight: bold;
     align-items: center;
+}
+
+.qn p{
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .ans{
@@ -53,6 +57,10 @@ header,.qn{
     color: var(--grayish_purple);
     max-height:0;
     display: none;
+}
+
+.qn img{
+ width:2rem;
 }
 
 .minus{
@@ -103,6 +111,6 @@ hr{
     }
     main{
         width:70vw;
-        margin:40vw auto;
+        margin:20vw auto;
     }
 }
