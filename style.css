@@ -1,0 +1,108 @@
+:root{
+--light_pink: hsl(275, 100%, 97%);
+--grayish_purple: hsl(293, 30%, 61%);
+--dark_purple: hsl(291, 91%, 45%);
+}
+
+body{
+font-family:url(https://fonts.google.com/specimen/Work+Sans);
+font-weight: 400, 600, 700;
+background-image: url(background-pattern-desktop.svg);
+background-size:100vw  ;
+background-repeat: no-repeat;
+background-color: var(--light_pink);
+margin: 0;
+align-content: center;
+width: 100vw;
+height: 100vh;
+}
+
+main{
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin:  auto;
+}
+
+p{
+    font-size: 18px;
+}
+
+h1{
+    font-weight: 700;
+    font-size:50px;
+    margin:0 0 0 20px;
+}
+
+header,.qn{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.qn{
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+}
+
+.ans{
+    font-weight: 400;
+    color: var(--grayish_purple);
+    max-height:0;
+    display: none;
+}
+
+.minus{
+    display: none;
+}
+
+.plus{
+    display:block;
+}
+
+.container{
+    background-color: white;
+}
+
+.container.active .ans{
+    max-height:100%;
+    display: block;
+    transition:transform 1.4s ease;
+    }
+
+    .container.active .plus{
+        display: none;
+    }
+
+    .container.active .minus{
+        display: block;
+    }
+
+hr{
+    background-color: var(--grayish_purple);
+    border: none;
+    height: 0.5px;
+}
+
+.container:hover{
+    
+    cursor: pointer;
+}
+
+.container:hover>.qn>p{
+     color: var(--dark_purple);
+}
+
+@media (max-width:430px){
+    body{
+        background-image: url(background-pattern-mobile.svg);
+        height: 100%;
+    }
+    main{
+        width:70vw;
+        margin:40vw auto;
+    }
+}
